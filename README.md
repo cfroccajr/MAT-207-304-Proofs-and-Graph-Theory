@@ -1,0 +1,40 @@
+# Notes on Discrete Mathematics at WCSU
+## To Do/Status:
+Still need to:
+- Need to add all the alt text material for the last chapter or so
+    - Added alt text to all the \includegraphics that had a blank alt={}
+    - Need to check for \includegraphics missing alt altogether
+    - Need to update alt texts to be more meaningful
+- circuits material (see Circuit Tests project on Overleaf)
+- probability reference ?
+- Look for additional places to add index entries
+- Find way to add "infinite loop" to index
+- Where "appropriate" add ```\pageref{}``` for image refernces that may need lots of page flipping
+- Look for places that should have ```\cleardoublepage``` instead of ```\clearpage```
+- Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
+- Redo graphics for composing functions so that the names of the functions are not in the domains/codomains (around page 78)
+    - The TikZ files have been updated but the png images need to be created.
+- Look for and reformat nested tables, i.e. don't use tables to make columns
+- Look for graphs that should have doublestruck lines and sort that
+- Look at graphic for matrix multiplication and sort that out.  Maybe just use the matrices and leave space for students to draw their own arrows as we go over it in class.
+- Create for for submitting issues but also directions for using Github for that purpose
+
+## TikZ Image Creation:
+- Put every TikZ image in its own file
+- Use Externalize to have TikZ create PDF's of images (https://www.overleaf.com/learn/latex/Questions/I_have_a_lot_of_tikz%2C_matlab2tikz_or_pgfplots_figures%2C_so_I%27m_getting_a_compilation_timeout._Can_I_externalise_my_figures%3F)
+- Use the following when inputting the TikZ, this ensures that the pdf file generated has the same name as the *.tex file the TikZ code is in
+```
+    % input command code based on 
+    % https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
+    % modified so that the tikz files are in the tikz folder where the exertanlized
+    % pictures are kept.
+    \newcommand{\inputtikz}[1]{%
+      \tikzsetnextfilename{#1}%
+      \input{tikz/#1.tex}%
+    }
+```
+- Use imagemagick with the command ```for file in *.pdf; do magick -density 300 "$file" "${file%.pdf}.png"; done``` in terminal window to convert pdf images to png
+- Copy png to Overleaf images/created and input like so ```\includegraphics[scale=0.24,alt={...}]{images/created/*.png}```
+- Note that as part of the image conversion process the png is larger, but when potentially converting to HTML for posting online png is preferable to pdf and for accessability so Acrobat recognizes it is an image.
+
+## Other Stuff ...

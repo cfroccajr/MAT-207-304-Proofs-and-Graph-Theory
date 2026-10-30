@@ -1,0 +1,260 @@
+\begin{defn}[Adjacency Matrix]\index{matrix}\index{adjacency matrix}
+    An \emph{adjacency matrix} for a graph is a two dimensional array \(A\) in which \(a_{ij}\) is the number of edges that we may traverse from vertex \(i\) to vertex \(j\).
+\end{defn}
+
+\begin{practiceprob}
+Fill in the entries of the adjacency matrix for the given graph.
+\begin{sides}[lefthand width=0.4\linewidth]
+\begin{center}
+    %\inputtikz{adj_matrix1}
+    \includegraphics[scale=0.24,alt={graph with three vertices and edges}]{images/created/adj_matrix1.png}
+\end{center}
+\tcblower
+\[
+\begin{blockarray}{cccc}
+    & A & B & C \\
+\begin{block}{c(ccc)}
+    A & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    B & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    C & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+\end{block}
+\end{blockarray}
+ \]
+\end{sides}
+\end{practiceprob}
+
+\begin{practiceprob}
+Fill in the entries of the adjacency matrix for the given graph.
+\begin{sides}[lefthand width=0.4\linewidth]
+\begin{center}
+    %\inputtikz{adj_matrix2}
+    \includegraphics[scale=0.24,alt={four vertex graph}]{images/created/adj_matrix2.png}
+\end{center}
+\tcblower
+
+\[
+\begin{blockarray}{ccccc}
+    & A & B & C & D \\
+\begin{block}{c(cccc)}
+    A & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    B & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    C & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    D & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+\end{block}
+\end{blockarray}
+ \]
+\end{sides}
+\end{practiceprob}
+
+\begin{practiceprob}
+Fill in the entries of the adjacency matrix for the given graph.
+\begin{sides}[lefthand width=0.4\linewidth]
+\begin{center}
+    %\inputtikz{adj_matrix_directed}
+    \includegraphics[scale=0.24,alt={five vertex disconnected graph}]{images/created/adj_matrix_directed.png}
+\end{center}
+\tcblower
+
+\[
+\begin{blockarray}{cccccc}
+    & A & B & C & D & E\\
+\begin{block}{c(ccccc)}
+    A & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    B & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    C & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    D & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    E & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+\end{block}
+\end{blockarray}
+ \]
+\end{sides}
+\end{practiceprob}
+
+\clearpage
+
+\begin{exposition}{Matrix Arithmetic}\index{matrix arithmetic}
+We add and subtract matrices term by term:
+\begin{center}
+    %\inputtikz{matrix_add}
+    \includegraphics[scale=0.24,alt={demonstration of adding matrices term by term}]{images/created/matrix_add.png}
+\end{center}
+We multiply matrices by combining rows with columns:
+\begin{center}
+    %\inputtikz{matrix_mult}
+    \includegraphics[scale=0.24,alt={demonstration of multiplying matrices row by column}]{images/created/matrix_mult.png}
+\end{center}
+\end{exposition}
+
+\begin{practiceprob}\index{identity matrix}\index{inverse matrix}\index{matrix!identity}\index{matrix!inverse}
+Find the sum, difference, and product of the following matrices where possible.
+\begin{equation*}
+    A=\begin{pmatrix*}[r]
+        2 & 7\\ 1 & 4
+    \end{pmatrix*},\ 
+    B=\begin{pmatrix*}[r]
+        4 & -7\\ -1 & 2
+    \end{pmatrix*},\ 
+    C=\begin{pmatrix*}[r]
+        2 & 0 & 1\\ 1 & 0 & -1
+    \end{pmatrix*},\ 
+    I=\begin{pmatrix*}[r]
+        1 & 0\\ 0 & 1
+    \end{pmatrix*}
+\end{equation*}
+\begin{enumerate}
+    \setlength\itemsep{2.3\baselineskip}
+    \item \(A+B=\)
+    \item \(B-A=\)
+    \item \(AB=\)
+    \item \(AI=\)
+    \item \(AC=\)
+    \item \(CA=\)
+    \item \(C+B=\)\vspace{2.3\baselineskip}
+\end{enumerate}
+
+\end{practiceprob}
+
+\clearpage
+
+\begin{practiceprob}
+Multiplying an adjacency matrix by itself allows us to count the number of walks from one vertex to another of a given length.  Sketch a graph corresponding to the given adjacency matrix.\vspace{1\baselineskip}\newline
+\(\displaystyle
+    A=\begin{pmatrix*}[r]
+        0 & 2 & 1\\
+        2 & 0 & 1\\
+        1 & 1 & 0
+    \end{pmatrix*}
+\)\vspace{1\baselineskip}
+\begin{enumerate}
+    \item How does \(A\) on its own give walks of length 1?\vspace{3\baselineskip}
+    \item Find \(A^2\) and compare it to walks of length 2.\vspace{3\baselineskip}
+    \item Find \(A^3\) and compare it to walks of length 3.\vspace{3\baselineskip}
+\end{enumerate}
+
+\end{practiceprob}
+
+\begin{practiceprob}
+Sketch a graph corresponding to the given adjacency matrix.\vspace{1\baselineskip}\newline
+\(\displaystyle
+    A=\begin{pmatrix*}[r]
+        1 & 2 & 1\\
+        0 & 0 & 0\\
+        0 & 1 & 0
+    \end{pmatrix*}
+\)\vspace{1\baselineskip}
+\begin{enumerate}
+    \item Walks of length 2:\vspace{3\baselineskip}
+    \item Walks of length 3:\vspace{3\baselineskip}
+    \item Walks of length 4:\vspace{3\baselineskip}
+\end{enumerate}
+
+\end{practiceprob}
+
+\clearpage
+
+\begin{exposition} By matching up and ``gluing'' together corresponding vertices we can \emph{concatenate} or  add graphs.  The adjacency matrix for the new graph is equal to the sum of the matrices for the graphs that were concatenated.
+\begin{figure}[H]
+    \centering
+    %\inputtikz{graph_adding1}
+    \includegraphics[scale=0.24,alt={explanation of adding graphs by glueing togehter vertices}]{images/created/graph_adding1.png}
+    \begin{equation*}
+        \begin{pmatrix*}[r]
+            0&1&0\\
+            1&0&1\\
+            0&1&0\\
+        \end{pmatrix*}
+            +
+        \begin{pmatrix*}[r]
+            0&0&1\\
+            0&0&0\\
+            1&0&0\\
+        \end{pmatrix*}
+            =
+        \begin{pmatrix*}[r]
+            0&1&1\\
+            1&0&1\\
+            1&1&0\\
+        \end{pmatrix*}
+    \end{equation*}
+    \caption{Concatenating Graphs and Their Adjacency Matrices}
+    \label{fig:matrix_concat}
+\end{figure}
+
+\end{exposition}
+
+\begin{practiceprob}
+Write adjacency matrices for each of the initial graphs and then add them to get the matrix for the concatenation of the graphs.
+\begin{center}
+    %\inputtikz{graph_adding2}
+    \includegraphics[scale=0.24,alt={practice adding graphs together}]{images/created/graph_adding2.png}
+\end{center}
+
+\vspace{16\baselineskip}
+
+
+\end{practiceprob}
+
+\clearpage
+
+\begin{exposition}
+We can use graphs and matrices to model networks and make predictions about movement through the networks.
+\begin{figure}[H]
+    \centering
+    %\inputtikz{pagerank}
+    \includegraphics[scale=0.24,alt={directed graph used to describe page rank algorithms}]{images/created/pagerank.png}
+    \caption{A Very Tiny Network}
+    \label{fig:tiny_network}
+\end{figure}
+\begin{equation*}
+    L=
+    \begin{blockarray}{ccccc}
+        & A & B & E & F \\
+    \begin{block}{c(cccc)}
+        A & 0 & 1/2 & 0 & 1/2 \\
+        B & 1 & 0 & 0 & 0 \\
+        E & 1/2 & 0 & 1/2 & 0 \\
+        F & 1/4 & 1/4 & 1/4 & 1/4 \\
+    \end{block}
+    \end{blockarray}
+    =
+    \begin{pmatrix*}[r]
+        0 & 0.5 & 0 & 0.5 \\
+        1 & 0 & 0 & 0 \\
+        0.5 & 0 & 0.5 & 0\\
+        0.25 & 0.25 & 0.25 & 0.25
+    \end{pmatrix*}
+\end{equation*}
+
+\begin{minted}{python}
+import numpy as np
+from numpy import linalg as LA
+
+# adj. matrix of links/probabilities
+L = np.array([[0,0.5,0,0.5],[1,0,0,0],[0.5,0,0.5,0],[0.25,0.25,0.25,0.25]])
+
+P=np.array([1,0,0,0]) # Initial position vector
+distance = 1 # Distance from one step to the next
+i = 0
+while distance>0.001 and i<100:
+# Multiply by L to represent making a random click
+    temp_P=P@L
+# Compare the position vectors
+    distance = LA.norm(temp_P-P)
+# Update
+    P=temp_P
+    i+=1
+print(P)
+\end{minted}
+\begin{equation*}
+    P=\begin{bmatrix}
+        0.37519702 & 0.24988937 & 0.12502424 & 0.24988937
+    \end{bmatrix}    
+\end{equation*}
+Starting at the website for Alice's Restaurant and then randomly clicking around there is a 37\% chance we get back to Alice's, 25\% chance of ending up at Bob's or the Dutchman, and only  13\% chance of ending up at Elzar's website. Thus, we rank Alice's site highest and Elzar's lowest.
+
+    % \(L\) is the link matrix, \(L^n\) is the naive approach
+    % \(dL+(1-d)J\) is the link matrix combined with another matrix to add random jumps, \(J\) is all ones
+    % Look in classes/code/PageRank.ipynb for example from Imperial College example.
+    
+\end{exposition}
+

@@ -1,0 +1,92 @@
+% ! TEX options=--shell-escape
+\DocumentMetadata{
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE},
+    pdfstandard=ua-2,
+    lang=en-US
+}
+\AddToDocumentProperties[hyperref]{pdftitle}{MAT 207-304: Proofs and Graph Theory}
+\AddToDocumentProperties[hyperref]{pdfauthor}{Chuck Rocca}
+\documentclass[12pt,twoside]{book}
+\input{tex/Discrete_Header}
+\input{tex/Discrete_Tikz_Header}
+
+% Externalization Commands and Packages
+% \usetikzlibrary{external}
+% \tikzexternalize[prefix=tikz/]
+% input command code based on 
+% https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
+% modified so that the tikz files are in the tikz folder where the exertanlized
+% pictures are kept.
+% \newcommand{\inputtikz}[1]{%
+%   \tikzsetnextfilename{#1}%
+%   \input{tikz/#1.tex}%
+% }
+
+
+%%%% Version without externalize %%%
+\newcommand{\inputtikz}[1]{%
+  \input{tikz/#1.tex}%
+}
+
+
+
+%%% The following spacing command is clunky and needs to be replaced as does the use of \vspace
+    \newcommand{\answerbox}[1][1in]{
+        \phantom{\rule{0pt}{20pt}}\rule{#1}{0.2pt}
+    }
+
+%%% Document Information %%%
+   \title{MAT 207-304: Proofs and Graph Theory}
+    \author{Charles Rocca}
+    \titlepic{
+        \includegraphics[width=3in,alt={WCSU Shield Logo with Arts and Sciences}]{images/WCSU_Logo_AS.png}
+    }
+
+\begin{document}
+
+\maketitle
+\input{copyright_information}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+    \input{chapters/preface}
+\cleardoublepage
+
+
+\chapter{Key Logic Material}
+    \input{chapters/logic/logic_chapter}
+\cleardoublepage
+
+\chapter{Proof Types}
+    \input{chapters/proofs/proofs}
+\cleardoublepage
+
+\chapter{Graph Theory}
+    \input{chapters/graphs/graph_theory_chapter}
+\cleardoublepage
+
+
+\appendix
+
+\chapter{Logic Reference Table}
+    \input{chapters/appendicies/logic_table}
+\cleardoublepage
+
+\chapter{Sets Reference Table}
+    \input{chapters/appendicies/set_laws}
+\cleardoublepage
+
+\nocite{rosen2006discrete}
+\nocite{grimaldi1994discrete}
+\nocite{lin1985set}
+\nocite{OEIS}
+
+\printbibliography[heading=bibintoc,]
+
+\printindex
+
+\end{document}

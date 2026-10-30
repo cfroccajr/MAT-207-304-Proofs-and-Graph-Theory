@@ -1,0 +1,227 @@
+
+
+\begin{defn}[Implications/Conditional Statements]
+    A \emph{conditional statement}, or \emph{implication}, is a compound statement of the form {\em ``if \(P\), then \(Q\).''}  The first statement, \(P\), is called the {\em hypothesis} or {\em premise} and the second is the {\em conclusion}.  Conditionals can also be read {\em ``\(P\) implies \(Q\),''} {\em ``\(P\) only if \(Q\),''}, {\em ``\(Q\), if \(P\).''}  Notationally, we write ``if \(P\), then \(Q\)'' as \(P\rightarrow Q\).
+\end{defn}
+
+\setcounter{n}{1}
+\begin{practiceprob}[When are Implications False]\label{GRimages}
+\setlength{\extrarowheight}{10pt}
+    Looking at the following images, 
+    \begin{center}
+        % \inputtikz{rainy_grass}
+        \includegraphics[scale=0.24,alt={Four figures with or without rain or wet grass},width=0.85\linewidth]{images/created/rainy_grass.png}
+    \end{center}
+    \begin{enumerate}
+        \setlength{\itemsep}{3\baselineskip}
+        \item For which images is the statement \emph{``If it is raining, then the grass is wet'' (\(R\rightarrow G\))} false?
+        \item Why is the statement false in those cases?
+        \item In what situations must it then be true?
+    \end{enumerate}\vspace{2\baselineskip}
+    Use the same sort of reasoning to try and fill in the following \emph{truth table}\index{truth table}.
+    \begin{center}
+    \setlength{\extrarowheight}{15pt}
+    \begin{tabular}{*{4}{c}*{5}{>{\centering}m{0.125\textwidth}}}
+        \(R\) & \(G\) & \(\sim R\) & \(\sim G\) & \(R\rightarrow G\) & \(G\rightarrow R\) & \(\sim R\rightarrow \sim G\) & \(\sim G\rightarrow \sim R\) & \(R\wedge \sim G\) \tabularnewline\hline
+        \(T\)&\(T\)&&&&&&&\tabularnewline\hline
+        \(T\)&\(F\)&&&&&&&\tabularnewline\hline
+        \(F\)&\(T\)&&&&&&&\tabularnewline\hline
+        \(F\)&\(F\)&&&&&&&
+    \end{tabular}
+    \end{center}
+\end{practiceprob}
+
+\clearpage
+
+\begin{practiceprob}[True or False: The Return]
+    In practice problem \ref{GRimages}, for which images are these true?
+    \begin{enumerate}
+    \setlength{\itemsep}{\baselineskip}
+        \item If ``there is a zombie,'' then ``the grass is wet.''
+        \item If ``there is a zombie,'' then ``it is raining.'' 
+        \item If ``it is raining,'' then ``the grass is green.'' 
+        \item If ``the grass is wet,'' then ``the grass is green.'' \vspace{\baselineskip}
+    \end{enumerate}
+\end{practiceprob}
+
+
+
+\begin{exposition}[Conditionals and Their Relations]
+    Starting with a conditional \(P \rightarrow Q\) we can write the following:
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item \emph{Converse}\index{converse}: \(Q\rightarrow P\)
+            \item \emph{Inverse}\index{inverse}: \(\sim P\rightarrow \sim Q\)
+            \item \emph{Contrapositive}\index{contrapositive}: \(\sim Q\rightarrow \sim P\)
+            \item \emph{Negation}\index{negation}: \(P\wedge \sim Q\)
+        \end{enumerate}
+    \end{multicols}
+    Where \((P\rightarrow Q) \equiv (\sim Q \rightarrow \sim P)\), 
+    \((Q\rightarrow P) \equiv (\sim P \rightarrow \sim Q)\), 
+    and \(\sim (P\rightarrow Q) \equiv (P \wedge \sim Q)\).
+    
+    We also say \(P\rightarrow t\) and \(c\rightarrow Q\) are \emph{vacuously true}\index{vacuously true} because their negations are always false:
+        \[\sim (P\rightarrow t) \equiv (P \wedge c) \equiv c\ \text{and}\ \sim (c\rightarrow Q) \equiv (c \wedge \sim Q) \equiv c.\]
+\end{exposition}
+
+\setcounter{n}{1}
+\begin{practiceprob}[Making Arguments]
+    If we assume it is true that ``If I carry an umbrella, then zombies dive bomb me,'' then which pictures should we look at? \answerbox
+    \begin{center}
+        % \inputtikz{dive_bomb}
+        \includegraphics[scale=0.24,alt={Four images with or without an umbrella or a zombie in a plane},width=0.85\linewidth]{images/created/dive_bomb.png}
+    \end{center}
+    What if, together with the original statement, we assume that it is true that ``I am carrying an umbrella,''
+    which picture(s) do we look at then \answerbox, are there zombies dive bombing me \answerbox?\vspace{\baselineskip}
+
+    \noindent%
+    What if we also assume that it is true that ``zombies dive bomb me,'' which picture(s) do we look at then \answerbox, am I carrying an umbrella \answerbox?
+    
+\end{practiceprob}
+
+\clearpage
+
+\begin{exposition}[More Rules and Arguments]\label{exp:arguments}
+    Given statements \(P\) and \(Q\) the following are some common valid and invalid argument forms.
+    \vspace{\baselineskip}
+
+    \begin{tabular}{*{4}{p{0.22\textwidth}}}
+    \emph{Modus Ponens}\index{modus ponens}:
+        \[
+            \begin{array}{ll}
+                P\rightarrow Q  \\
+                P \\\hline
+                \therefore\ Q
+            \end{array}
+        \] &
+    \emph{Modus Tollens}\index{modus tollens}:
+        \[
+            \begin{array}{ll}
+                P\rightarrow Q  \\
+                \sim Q \\\hline
+                \therefore\ \sim P
+            \end{array}
+        \] &
+    \emph{Converse Error}\index{converse error}:
+    \textcolor{secondaryaccent}{
+        \[
+            \begin{array}{ll}
+                P\rightarrow Q  \\
+                Q \\\hline
+                \therefore\ P
+            \end{array}
+        \]
+    }&
+    \emph{Inverse Error}\index{inverse error}:
+    \textcolor{secondaryaccent}{
+        \[
+            \begin{array}{ll}
+                P\rightarrow Q  \\
+                \sim P \\\hline
+                \therefore\ \sim Q
+            \end{array}
+        \]
+    }\tabularnewline
+    \emph{Disjunctive\newline Syllogism}\index{disjunctive syllogism}:
+        \[
+            \begin{array}{ll}
+                P\vee Q  \\
+                \sim P \\\hline
+                \therefore\ Q
+            \end{array}
+        \] &
+    \emph{Law of\newline Simplification}\index{law of simplification}:
+        \[
+            \begin{array}{ll}
+                P\wedge Q  \\ \hline
+                \therefore\ P\ \text{and}\ Q
+            \end{array}
+        \] &
+    \emph{Transitivity}\index{transitivity}:
+        \[
+            \begin{array}{ll}
+                P\rightarrow Q  \\
+                Q\rightarrow R \\\hline
+                \therefore\ P\rightarrow R
+            \end{array}
+        \] &
+    \emph{Contradiction}\index{contradiction}:
+        \[
+            \begin{array}{ll}
+                P \wedge \sim Q\rightarrow c  \\\hline
+                \therefore\ P\rightarrow Q
+            \end{array}
+        \] 
+    \end{tabular}
+
+    We can demonstrate the validity or invalidity of an argument using a truth table and by looking at \emph{critical rows}\index{critical row} which are the rows of the tables in which all the premises for the argument are true. For example this table shows the validity of Modus Ponens since the conclusion is true in the only row in which the premises are true:
+    \[
+        \begin{array}{*{3}{>\centering m{0.1\linewidth}|}l}
+            P & Q & P\rightarrow Q & \\ \cline{1-3}\rowcolor{tertiaryaccent!60}
+            T & T & T & \leftarrow\ \text{Critical Row} \\ 
+            T & F & F &  \\
+            F & T & T &  \\
+            F & F & F &  \\
+        \end{array}
+    \]
+    Where as, this table shows that the Converse Error is an invalid argument since in one of the critical rows the premises are true while the conclusion is false.
+    \[
+        \begin{array}{*{3}{>\centering m{0.1\linewidth}|}l}
+            P & Q & P\rightarrow Q & \\ \cline{1-3}\rowcolor{tertiaryaccent!60}
+            T & T & T & \leftarrow\ \text{Critical Row} \\ 
+            T & F & F &  \\ \rowcolor{secondaryaccent!60}
+            F & T & T & \leftarrow\ \text{Critical Row} \\
+            F & F & F &  \\
+        \end{array}
+    \]
+\end{exposition}
+
+\begin{practiceprob}
+    Fill in the truth table below and identify the critical rows in order to demonstrate the validity of Modus Tollens.
+    \[
+        \begin{array}{*{5}{>\centering m{0.1\linewidth}|}l}
+            \phantom{\sim}P & \phantom{\sim}Q & \sim P & \sim Q & P\rightarrow Q & \\ \cline{1-5}
+             &  &  & & & \phantom{\leftarrow\ \text{Critical Row}} \\ 
+             &  &  &  & & \\
+             &  &  &  & & \\
+             &  &  &  & & \\
+        \end{array}
+    \]
+\end{practiceprob}
+
+\begin{practiceprob}
+    Fill in the truth table below and identify the critical rows in order to demonstrate that the inverse error is not a valid argument form.
+    \[
+        \begin{array}{*{5}{>\centering m{0.1\linewidth}|}l}
+            \phantom{\sim}P & \phantom{\sim}Q & \sim P & \sim Q & P\rightarrow Q & \\ \cline{1-5}
+             &  &  & & & \phantom{\leftarrow\ \text{Critical Row}} \\ 
+             &  &  &  & & \\
+             &  &  &  & & \\
+             &  &  &  & & \\
+        \end{array}
+    \]
+\end{practiceprob}
+
+\begin{exposition}
+    Finally, we can understand implications and arguments in terms of \emph{Venn Diagrams}.  For example, how does figure \ref{fig:vennimplication} demonstrate that 
+    \begin{center}
+        ``If you are a zombie, then you are green''
+    \end{center}
+    is true, while
+    \begin{center}
+        ``If you are green, then you are a zombie''
+    \end{center}
+    is false?
+    \begin{figure}[H]
+        \centering
+        % \inputtikz{vennplication}
+        \includegraphics[scale=0.24,alt={venn diagram with images of variaous colors and shapes}]{images/created/vennplication.png}
+        \caption{Diagramming an Implication and Arguments}
+        \label{fig:vennimplication}
+    \end{figure}
+    Further, how can we use figure \ref{fig:vennimplication} to explain the validity or invalidity of all the arguments in Exposition \ref{exp:arguments} on page \pageref{exp:arguments}?
+    \vspace{8\baselineskip}
+\end{exposition}
+
+
+
